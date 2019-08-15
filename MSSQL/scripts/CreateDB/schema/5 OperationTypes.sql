@@ -1,6 +1,3 @@
-USE [WashCards]
-GO
-
 /****** Object:  Table [dbo].[OperationTypes]    Script Date: 24.07.2019 13:20:21 ******/
 SET ANSI_NULLS ON
 GO

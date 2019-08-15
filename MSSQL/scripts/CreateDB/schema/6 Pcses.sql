@@ -1,6 +1,3 @@
-USE [WashCards]
-GO
-
 /****** Object:  Table [dbo].[Pcses]    Script Date: 24.07.2019 13:20:52 ******/
 SET ANSI_NULLS ON
 GO
