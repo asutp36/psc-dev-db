@@ -1,0 +1,5 @@
+IDCardType	Code	Name
+1	dev	отладочная
+2	tech	техническая
+3	clean	операторская
+4	client	клиентская

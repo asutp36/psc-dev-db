@@ -1,0 +1,4 @@
+IDOperationType	Code	Name
+1	activation	активация
+2	increase	пополнение
+3	decrease	списание

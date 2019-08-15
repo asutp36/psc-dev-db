@@ -1,0 +1,52 @@
+USE [WashCards]
+GO
+
+/****** Object:  Table [dbo].[Cards]    Script Date: 24.07.2019 13:19:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Cards](
+	[IDCard] [int] IDENTITY(1,1) NOT NULL,
+	[IDOwner] [int] NOT NULL,
+	[CardNum] [text] NOT NULL,
+	[IDCardStatus] [int] NOT NULL,
+	[IDCardType] [int] NOT NULL,
+ CONSTRAINT [PK_Cards] PRIMARY KEY CLUSTERED 
+(
+	[IDCard] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Cards]  WITH CHECK ADD  CONSTRAINT [FK_Cards_CardStatuses] FOREIGN KEY([IDCardStatus])
+REFERENCES [dbo].[CardStatuses] ([IDCardStatus])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Cards] CHECK CONSTRAINT [FK_Cards_CardStatuses]
+GO
+
+ALTER TABLE [dbo].[Cards]  WITH CHECK ADD  CONSTRAINT [FK_Cards_CardTypes] FOREIGN KEY([IDCardType])
+REFERENCES [dbo].[CardTypes] ([IDCardType])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Cards] CHECK CONSTRAINT [FK_Cards_CardTypes]
+GO
+
+ALTER TABLE [dbo].[Cards]  WITH CHECK ADD  CONSTRAINT [FK_Cards_Owners] FOREIGN KEY([IDOwner])
+REFERENCES [dbo].[Owners] ([IDOwner])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Cards] CHECK CONSTRAINT [FK_Cards_Owners]
+GO
+
+
