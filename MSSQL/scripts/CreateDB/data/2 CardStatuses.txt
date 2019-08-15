@@ -1,3 +1,0 @@
-IDCardStatus	Code	Name
-1	norm	действующая
-2	blocked	заблокированная
